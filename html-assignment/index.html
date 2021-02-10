@@ -4,25 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title> Lily &#45; About Me </title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <main>
         <!-- introduction webpage header -->
         <header>
-            <h1> Lily </h1>
+            <!-- adding class "site-title" to the main heading of the page -->
+            <h1 class="site-title"> Lily </h1>
             <nav>
                 <ul>
-                    <li> <a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="notes.html">Notes</a></li>
                 </ul>
-
             </nav>
         </header>
 
         <!-- main page image, caption -->
         <img src="images/html-assignment-photo.png" alt="Lily's vector art of Genshin Impact character Qiqi"
-            title="Lily's vector art of Genshin Impact character Qiqi">
+            title="Lily's vector art of Genshin Impact character Qiqi" id="my-image">
         <p> I am not comfortable using a photo of myself on a public link, so I decided to use vector art I recently
             made in one of my classes. </p>
 
@@ -59,8 +60,8 @@
                 <h2>Hobbies</h2>
             </header>
 
-            <!-- unordered list of hobbies -->
-            <ul>
+            <!-- unordered list of hobbies. added "squarebullets" class to list -->
+            <ul class="squarebullets oddlistbackground">
                 <li>Sleeping</li>
                 <li>Makeup</li>
                 <li>Fashion</li>
