@@ -1,10 +1,19 @@
-/* ctrl + / to add a comment block */
+
+html{
+    font-size: 16px;
+}
 body {
     /* !important will overwrite the cascading effect */
     color: darkslategray !important;
-    font-family: Arial, Helvetica, sans-serif
-}
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../images/white_brick_wall.png");
 
+    /* background-repeat: no-repeat; */
+    /* x-axis y-axis  */
+    /* background-position: 10px 20px; */
+    /* background-size: cover; */
+}
+/* ctrl + / to add a comment block */
 /* cascading */
 h1 {
     color: white;
@@ -31,6 +40,9 @@ nav ul{
 nav ul a {
     color:darkslategray;
     text-decoration: none;
+    /* rem is root element's(html tag) font size */
+    font-size: 1.5rem;
+    /* 1.5 x 16 px = 24px */
 }
 
 /* class name selector */
@@ -43,14 +55,29 @@ nav ul a {
 
 /* id selector */
 /* specificty: 0100 */
-#treatofweek{
-    background-color: orange;
-}
-/* Avoid using id for styling, use classes mostly */
+#treatofweek {
+   background: darkslategrey url("../images/bread.jpg") no-repeat center center;
+   background-size: cover;
+   color: #fff;
+   font-size: 1.5rem;
+   /* 1.5 x 16 px = 24px */
+   /* em is for element's font size */
+   padding: 1em;
+   /* 1 x 1.5rem = 1 x 1.5 x 16px = 24px */
+   width: 50%; 
 
-.large-text {
-    font-size: 20px;
 }
+/* overwriting the background-color for nth-child list items */
+/* 0113 */
+#treatofweek dl ul li:nth-child(n){
+    background-color: transparent;
+}
+.large-text {
+    font-size: 1.25rem;
+    /* 1.25 x 16 = 20px */
+}
+
+/* Avoid using id for styling, use classes mostly */
 
 /* Child selector or direct child selector */
 article > p{
@@ -107,7 +134,8 @@ aside ul li:last-child{
 /* nth-child using the formula n = 0, 1, 2, 3, 4, 5... 
 even = 2n 
 odd = 2n+1 */
-dl ul li:nth-child(){
+/* 0013 */
+dl ul li:nth-child(2n+1){
     background-color:white
 }
 
