@@ -1,14 +1,17 @@
 /* ctrl + / to add a comment block */
 body {
-    color: darkslategray;
+    /* !important will overwrite the cascading effect */
+    color: darkslategray !important;
     font-family: Arial, Helvetica, sans-serif
 }
 
+/* cascading */
 h1 {
     color: white;
 
 }
 
+/* Specifitiy: 0001 (inline,  id, class, tag) */
 p {
     background-color: lightblue;
 }
@@ -19,17 +22,19 @@ h1,h2,h3,h4 {
 }
 
 /* descendant selector */
+/* specificty: 0002 */
 nav ul{
     list-style: none;
 }
 
 /* descendant selector - multiple levels */
-nav ul a{
+nav ul a {
     color:darkslategray;
     text-decoration: none;
 }
 
 /* class name selector */
+/* specifity: 0010 */
 .orange-link {
     background-color: darkslategray;
     color: orange;
@@ -37,6 +42,7 @@ nav ul a{
 }
 
 /* id selector */
+/* specificty: 0100 */
 #treatofweek{
     background-color: orange;
 }
@@ -96,4 +102,26 @@ even = 2n
 odd = 2n+1 */
 dl ul li:nth-child(){
     background-color:white
+}
+
+/* css specificty */
+/* specifiticty: 0001 */
+footer {
+    background-color: #d5836c;
+    padding: 20px;
+}
+
+/* soecificity: 0002 */
+body footer{
+    background-color: rgb(0, 0, 0);
+}
+
+/* specifity: 0010 */
+.site-footer{
+    background-color: cornflowerblue;
+}
+
+/*  */
+footer.site-footer{
+    background-color: rgba(0, 0, 0, 0.5)
 }
