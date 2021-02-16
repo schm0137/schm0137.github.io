@@ -1,0 +1,134 @@
+/* ctrl + / to add a comment block */
+body {
+    /* !important will overwrite the cascading effect */
+    color: darkslategray !important;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+/* cascading */
+h1 {
+    color: white;
+
+}
+
+/* Specifitiy: 0001 (inline,  id, class, tag) */
+p {
+    background-color: lightblue;
+}
+
+/* selecting multiple elements to apply same styles */
+h1,h2,h3,h4 {
+    text-decoration: underline;
+}
+
+/* descendant selector */
+/* specificty: 0002 */
+nav ul{
+    list-style: none;
+}
+
+/* descendant selector - multiple levels */
+nav ul a {
+    color:darkslategray;
+    text-decoration: none;
+}
+
+/* class name selector */
+/* specifity: 0010 */
+.orange-link {
+    background-color: darkslategray;
+    color: orange;
+    text-decoration: none;
+}
+
+/* id selector */
+/* specificty: 0100 */
+#treatofweek{
+    background-color: orange;
+}
+/* Avoid using id for styling, use classes mostly */
+
+.large-text {
+    font-size: 20px;
+}
+
+/* Child selector or direct child selector */
+article > p{
+    /* typography properties */
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: lowercase;
+    text-align: center;
+    letter-spacing: 2px;
+   
+}
+
+/* adjacent sibling selector */
+h3+ul{
+    /* thickness style color */
+    border: 1px solid black;
+}
+
+a[href="#treatofweek"]{
+    font-weight: bold;
+}
+[title*="Executive"]{
+    background-color: yellow;
+}
+
+/* using pseudo classes. styling navigation */
+
+/* remember this formula when styling: LoVe HAte, link, visited, hover, active */
+
+nav ul a,
+nav ul a:link,
+nav ul a:visited{
+    background-color: orange;
+   /* horizontal, vertical, blur, spread, color */
+    box-shadow: -2px 2px 4px 2px black;
+}
+
+nav ul a:hover,
+nav ul a:focus {
+    text-decoration: underline;
+}
+
+nav ul a:active{
+    /*  horizontal vertical blur spread color */
+    box-shadow: 0 0 4px 2px black;
+}
+
+/* position related Pseudo class selectors  */
+aside ul li:last-child{
+    font-weight: bold;
+}
+
+/* nth-child using the formula n = 0, 1, 2, 3, 4, 5... 
+even = 2n 
+odd = 2n+1 */
+dl ul li:nth-child(){
+    background-color:white
+}
+
+/* css specificty */
+/* specifiticty: 0001 */
+footer {
+    background-color: #d5836c;
+    padding: 20px;
+}
+
+/* soecificity: 0002 */
+body footer{
+    background-color: rgb(0, 0, 0);
+}
+
+/* specifity: 0010 */
+.site-footer{
+    background-color: cornflowerblue;
+}
+
+/* 0011 */
+footer.site-footer{
+    background-color: rgba(0, 0, 0, 0.5)
+}
