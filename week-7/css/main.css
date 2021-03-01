@@ -13,6 +13,16 @@ body {
     /* background-position: 10px 20px; */
     /* background-size: cover; */
 }
+
+/* cascading */
+body {
+    color: red;
+    padding-top: 80px;
+}
+img {
+    width: 100%;
+}
+
 /* ctrl + / to add a comment block */
 /* cascading */
 h1 {
@@ -37,8 +47,19 @@ nav ul{
     list-style: none;
 }
 
+/*  EX 1 - Display and Box Sizing */
+nav ul li{
+    display: inline-block;
+    width: 49%;
+    padding: 1em;
+    box-sizing: border-box;
+    border: 1px solid;
+    margin: -3px;
+}
+
 /* descendant selector - multiple levels */
 nav ul a {
+    display: block;
     color:darkslategray;
     text-decoration: none;
     /* rem is root element's(html tag) font size */
@@ -49,21 +70,58 @@ nav ul a {
 /* class name selector */
 /* specifity: 0010 */
 .orange-link {
+    padding: 1.5em;
+    width: 300px;
+    display:inline-block;
     background-color: darkslategray;
     color: orange;
     text-decoration: none;
 }
 
+/* float */
+article,
+aside{
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid black;
+    padding: 1.5em;
+    box-sizing: border-box;
+    float: left;
+}
+
+aside {
+    width: 20%;
+}
+
+.clearfix:after{
+    content: '';
+    display: table;
+    clear:both;
+}
+
+section {
+    /* clearing the float */
+    clear: both;
+}
+
+.orange-link.large-text{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 /* id selector */
 /* specificty: 0100 */
 #treatofweek {
+   position:relative;
+   clear: both;
    background: darkslategrey url("../images/bread.jpg") no-repeat center center;
    background-size: cover;
    color: #fff;
    font-size: 1.5rem;
    /* 1.5 x 16 px = 24px */
    /* em is for element's font size */
-   padding: 1em;
+   /* four padding values, clockwise: top, right, bottom, left */
+   padding: 1em 1em 3em 1em;
    /* 1 x 1.5rem = 1 x 1.5 x 16px = 24px */
    width: 50%; 
 
@@ -107,6 +165,14 @@ a[href="#treatofweek"]{
 
 /* using pseudo classes. styling navigation */
 
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 999;
+}
 /* remember this formula when styling: LoVe HAte, link, visited, hover, active */
 
 nav ul a,
