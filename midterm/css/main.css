@@ -1,0 +1,225 @@
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* setting the base font size for the html document to 16px. */
+html{
+    font-size: 16px;
+}
+
+/* css adjustments to the body tag */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #aad4cf;
+    width:75%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+/* styling the main content */
+main {
+    background-color: #d4e9e7;
+}
+
+/* adding background image and centering the header with appropriate styling. positioning set to relative to maintain the absolute positioned h1 contents inside the initial header.  */
+header{
+    padding:200px;
+    text-align: center;
+    color: white;
+    font-size: 5.1rem;
+    background-image: url("../images/lone-starfish-wide.jpg");
+    background-position: 50% 50%;
+    background-size:cover;
+    position: relative
+}
+
+/* setting the <h1> tag to an absolute position, allowing me to furthur adjust the positioning towards the bottom of the header image to match the reference. */
+h1{
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    left: 0;
+}
+
+/* styling the navigation */
+.primarynav{
+    text-transform:uppercase;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 2.2rem;
+    width: 33%;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 0.5%
+}
+
+/* adding thin left & right borders between the middle <li> value */
+.primarynav:nth-child(n+2){
+    border-left-style: solid;
+    border-width: 1px;
+    border-color: black;
+    
+}
+
+/* styling the <h2> tag */
+h2{
+    font-size: 2.8rem;
+    font-weight: 500;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+}
+
+/* styling the <h3> tag to be smaller than <h2>, along with added padding and adjusted font weight. */
+h3{
+    font-size: 2.2rem;
+    font-weight: 500;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+}
+
+/* styling the <h4> tag to be smaller than <h3>, along with added padding and adjusted font weight. */
+h4{
+    font-size: 1.7rem;
+    font-weight:500;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+}
+
+/* paragraph text adjustments to match the reference, including line height, margins, and font size. */
+p{ 
+    font-size: 1.34rem;
+    font-weight:500;
+    line-height: 150%;
+    margin-left: 2%;
+    margin-right: 2%;
+    letter-spacing: 0;
+
+}
+
+/* adjusting the medium photo of the star fish to float left and have the paragraph content wrapped around it, padding added to have a clear seperation between image and text. */
+.starfishmed{
+    width:23%;
+    float:left;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+
+}
+
+/* adding a "disc" bullet point style to the .factslist class, used for the unordered list on the main page. */
+.factslist{
+    list-style:disc;
+    padding-left: 2.3%;
+   
+}
+
+/* contact form styling class */
+.contactform{
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    
+}
+
+/* making form labels have margins on the top & bottom for seperation between contents whilst also increasing the font weight to 600 (bold) to match the reference.  */
+label {
+    
+    margin-top:1.5%;
+    margin-bottom:0.5%;
+    font-weight:600;
+}
+
+/*  */
+.radioinput{
+    display: inline-block;
+    
+}
+
+/* adding class specific adjustments to the first three labels used in the contact form, includes increasing the font size and setting the layout to display: block, keeping the order of the labels to a vertical form. */
+.textlabel{
+    display:block;
+    font-size:1.2rem;
+}
+
+/* adjusting the first two input boxes of the contact form. increases the overall width to spread across the screen, border color, style, and border width, along with increasing the height of the input box to match the reference given. */
+.thintextinput{
+    width:99%;
+    height:35px;
+    border-style:solid;
+    border-color:lightgrey;
+    border-width:1px;
+}
+
+/* adjusting the border and width to match the reference given, along with turning off the ability for a user to manually adjust the size of the input field during webpage use. */
+.widetextinput{
+    width:99%;
+    resize:none;
+    border-style:solid;
+    border-color:darkgrey;
+    border-width:2px;
+}
+/* CSS adjustments to the form submit button, such as increasing the padding between the border and inside text, removing the inner background, and adding a thin solid background. */
+.contactbutton{
+    background:none;
+    padding:1%;
+    margin-top:2%;
+    margin-bottom:0.5%;
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+}
+
+/*  css adjustments to make sure the footer is properly integrated into the webpage. this includes aligning the content to the right-most sides and adding padding around the content for clear seperation between other contents. Due to the footer tag not being included in the <main> tag, the same background color used in <main> will have to be put into the footer class to match the two and have visual consistency.  */
+.sitefooter{
+    text-align: right;
+    background-color: #d4e9e7;
+    padding-top:2%;
+    padding-bottom:2%;
+    padding-left:1%;
+    padding-right:1%;
+    margin-bottom:2%;
+}
