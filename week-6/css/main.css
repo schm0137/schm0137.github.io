@@ -22,7 +22,7 @@ h1 {
 
 /* Specifitiy: 0001 (inline,  id, class, tag) */
 p {
-    background-color: lightblue;
+    background-color: lightblue;   
 }
 
 /* selecting multiple elements to apply same styles */
