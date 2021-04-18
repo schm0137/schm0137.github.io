@@ -54,10 +54,7 @@ body{
     line-height: 1.5;
 }
 
-*, *::after, *::before {
-    box-sizing: inherit;
-    line-height: inherit;
-}
+
 
 h1,h2,h3{
     font-weight: bold;
