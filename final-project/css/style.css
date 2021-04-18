@@ -771,4 +771,7 @@ footer a {
         margin-left: 4rem;
         
     }
+    .footerone a{
+        text-decoration:underline;
+    }
 }   
