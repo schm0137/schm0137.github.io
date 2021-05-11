@@ -1,0 +1,777 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ---------------- css reset ---------------- */
+
+/* ---------------- custom css ---------------- */
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+/* setting base styling for h1 tags */
+h1 {
+    font-weight:bolder;
+    font-size: 5rem;
+    line-height: 7rem;
+}
+
+/* setting base styling for h2 tags */
+h2 {
+    font-weight:bolder;
+    font-size: 3.5rem;
+    line-height: 7rem;
+}
+
+/* setting base styling for h3 tags */
+h3 {
+    font-weight:bolder;
+    font-size: 2.5rem;
+    line-height: 7rem;
+}
+
+/* setting base styling for h5 tags */
+h5 {font-weight:bolder;
+    font-size: 1rem;
+}
+
+/* setting base styling for p tags */
+p {
+    font-weight: 600;
+    line-height: 1.6rem;
+}
+
+/* setting base styling for hr tags */
+hr {
+    border: 1px solid #c78c06;
+}
+/* navbar adjustments  */
+
+.navbar {
+    background-color: #222222;
+    padding-top: 0.1rem;
+    padding-bottom: 0.5rem;
+}
+
+.navbar a { 
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbarlogobackground {
+    background-color: #c78c06;
+    padding: 1rem 0 2rem 0;
+    margin: 1rem 1rem 0 1rem;
+}
+
+.center {
+    text-align: center;
+    color: #c78c06;
+    font-weight:500;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.orange {
+    text-align: center;
+    color: #222222;
+    padding-top: 2rem;
+    
+}
+
+/* search box adjustments in header */
+
+
+.navbarform {
+    display: flex;
+    font-size: inherit;
+    margin: 1rem;
+   
+}
+
+.navbarformsearchbutton {
+ border-color: #c78c06;
+ border: 1px solid #c78c06;
+ background-color: #222222;
+ color:#c78c06;
+}
+.navbarformsearch {
+    width: 99%;
+    font-size: inherit;
+    font-weight: bold;
+    height: 3rem;
+}
+/* Welcome section, hero image + text adjustments */
+
+.image-container {
+    position: relative;
+  
+}
+.welcomeimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 35rem;
+   
+    width: auto;
+    height: auto;
+   
+    
+}
+/* setting overlay to absolute position allowing to position over image */
+.welcome-overlay {
+    background-color: rgba(0,0,0,0.6);
+    color: #ffffff;
+    text-align: left;
+    position:absolute;
+    padding: 3rem 0rem 1.5rem 0rem;
+    width: 100%;
+    top: 0;
+    margin: 4rem 0 3.5rem 0;
+}
+
+.welcome-text {
+    display:inline-block;
+    padding-left: 1rem;
+}
+
+/* button styling */
+
+.headerbtn {
+    display: inline-block;
+    color: #222222;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border: 2px solid #c78c06;
+    background-color: #c78c06;
+    padding: 2rem 2rem 2.5rem 2rem;
+    margin: 1rem 0 0 0;
+    text-align: center;
+}
+
+.servicebtn {
+    display: inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #222222;
+    padding: 1.5rem 1rem 2rem 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+   
+}
+.servicebtntwo {
+    display: inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #222222;
+    padding: 1.5rem 1rem 2rem 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.visionbtn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.6);
+    border: 1px solid #c78c06;
+    padding: 2rem 2rem 2.5rem 2rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.contactbtn {
+    color:#c78c06;
+    background-color: #222222;
+    border: 2px solid #222222;
+    font-size: 1.5rem;
+    margin-top:1.5rem;
+}
+
+/* icon styling to ensure aligned with text */
+.arrowicon {
+    position: relative;
+    top: 5px;
+    margin-left: 1rem;
+}
+/* about us section */
+.aboutussection {
+    background-color: #ffe6ac;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+.aboutusdiv{
+    margin:1rem;
+}
+.aboutusimage{
+    width: 100%;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Our Services grid section */
+.serviceheader {
+    background-color: none;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.servicebody {
+    background-color: #ffe6ac;
+    margin: 1rem 2rem 1rem 2rem;
+    
+}
+.servicebodytwo {
+    background-color: #ffe6ac;
+    margin: 1rem 2rem 1rem 2rem;
+    
+}
+/* aligns "Service" he2 to section */
+.serviceheader {
+    margin-left: 1.5rem;
+}
+
+.servicegriditem p {
+    margin: 1rem;
+}
+.servicegriditem h3 {
+    margin: 1rem;
+}
+.servicegriditem img {
+    width: 100%;
+}
+
+
+/* vision section */
+.visionsection{
+    width:auto;
+    position:relative;
+    height: 20rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.visionimage{
+    width:100%;
+    height:20rem;
+    object-fit: cover;
+}
+.visiontext{
+    position: absolute;
+    top: 0px;
+    color: #ffffff;
+    margin-left: 2rem;
+}
+
+/* team section styling */
+.teamstyle {
+    padding-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.teamcontainer {
+    background-color: #ffe6ac;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.teamimg {
+    width: 100%;
+    background-color: #ffe6ac;
+    padding-bottom: 1rem;
+
+}
+.teamitem h2 {
+    margin-left: 2rem;
+}
+
+/* contact section */
+.labelforms {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+.thininput {
+    width: 100%;
+    box-sizing: border-box;
+  
+}
+
+.contactitem {
+    box-sizing: border-box;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.widetextinput {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+}
+
+/* hours of operation section */
+.contacttable {
+    width: 100%;
+  
+}
+table, th, td {
+    border: 1px solid black;
+    height: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+th {
+    background-color: #ffe6ac;
+    text-align: center;
+    
+}
+td {
+    padding-left: 1rem;
+}
+
+/* location section */
+iframe {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+/* footer section */
+.footerone {
+    background-color:#222222;
+    color:#c78c06;
+    padding: 2rem 0 1rem 0.5rem;
+}
+footer p {
+    font-weight:500;
+    line-height: 2.5rem;
+}
+footer a {
+    text-decoration: none;
+    color:#c78c06;
+    font-weight:500;
+}
+
+/* media querie, desktop view */
+
+@media screen and (min-width: 760px) {
+   
+   
+
+    /* html, heading, p edits */
+
+    body {
+        max-width: 1200px;
+    }
+    h1{
+        font-size: 6rem;
+        line-height: 10rem;
+    }
+    h2 {
+        font-size: 4rem;
+        line-height: 8rem;
+    }
+    
+    h3 {
+        font-size: 2.3rem;
+    }
+    p {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+
+    /* navbar styling */
+    
+    .navbarlogobackground {
+        background-color: #222222;
+        margin-left: 0;
+        
+    }
+    .navbarlogobackground a {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.5rem;
+        margin-right: 2rem;
+        margin-left: 1.5rem;
+    }
+    .navbar{
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+      
+    }
+    
+    nav ul li {
+        display: inline-block;
+        margin-right: 3rem;
+      
+      
+    }
+
+    .navbarformsearch, .navbarformsearchbutton {
+        display: inline-block;
+    }
+
+    .orange{
+        background-color: #c78c06;
+        padding-top: 1.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 1.5rem;
+        margin-right: 0rem;
+      
+        
+    }
+    /* welcome header styling */
+    .image-container {
+        position: relative;
+    }
+
+    .welcomeimage {
+      
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 35rem;
+        max-height: 55rem;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+        
+    }
+
+    .welcome-overlay {
+        position:absolute;
+        padding: 4rem 0rem 2rem 0rem;
+        width: 92%;
+        top: 0;
+        margin-left: 3.5rem;
+        margin-top: 5.5rem;
+    }
+
+    .welcome-text{
+        margin-top: 2rem;
+    }
+
+    .p1 {
+        margin-top: 2rem;
+        margin-left: 0.5rem;
+    }
+    
+   /* buttons */
+
+   /* header button adjustments for desktop */
+
+   .headerbtn {
+        font-weight: 600;
+        font-size: 2rem;
+        border: 2px solid #c78c06;
+        background-color: #c78c06;
+        padding: 3.5rem 3rem 3.5rem 3rem;
+        margin: 1rem 0 0 0;
+        text-align: center;
+    }
+
+     /* service button adjustments for destkop */
+
+    .servicebtn {
+        font-size: 1.7rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        margin-bottom: 0rem;
+        margin-top: 2rem;
+        display: block;
+        text-align: center;
+        align-items: center;
+        
+    }
+
+    .servicebtntwo {
+        font-size: 1.7rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        padding-top: 2.5rem;
+        padding-bottom: 3rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        display: block;
+        text-align: center;
+        align-items: center;
+       
+        
+    }
+
+    /* vision button adjustments for desktop */
+
+    .visionbtn {
+        font-size: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+    }
+    /* icon styling */
+
+    .arrowicon {
+        position: relative;
+        top: 0px;
+        margin-left: 1rem;
+    }
+
+    /* about us section */
+
+    .aboutussection {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .aboutusimage{
+       
+        width: 60%;
+        float:left;
+        margin-left: 4rem;
+        margin-right: 1rem;
+        object-fit: cover;
+    }
+
+    .aboutp {
+        margin-bottom: 2rem;
+    }
+    .aboutusheader {
+      
+        vertical-align: top;
+        line-height: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    /* services section */
+
+    /* creating grid and assigning grid items positions */
+
+    .servicegridcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .servicegriditem:nth-child(1) {
+        grid-column: 1 / span 3;
+    }
+
+    .servicegriditem:nth-child(2) {
+        grid-column: 4 / span 6;
+    }
+
+    .servicegriditem:nth-child(3) {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+
+    .servicegriditem:nth-child(4) {
+        grid-column: 3 / span 2;
+        grid-row: 2;
+    }
+
+    .servicegriditem:nth-child(5) {
+        grid-column: 5 /  span 6;
+        grid-row: 2;
+    }
+   
+    /* styling */
+
+    .servicessection {
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+
+    .serviceheader { 
+        margin-left: 1rem;
+    }
+
+    .servicebody {
+        margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    .servicebodytwo {
+      
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 3rem;
+        padding-bottom: 0rem;
+    }
+
+
+    .servicegriditem p {
+        margin: 1rem;
+    }
+
+    .servicegriditem h3 {
+        margin: 1rem;
+    }
+
+    .servicegriditem img {
+        width: 100%;
+    }
+
+    /* vision section */
+
+    .visionsection {
+        margin-top: 0rem;
+        padding-bottom: 3rem;
+    }
+    .visiontext {
+        margin-left: 8rem;
+        margin-top: 2rem;
+    }
+    
+    .visionimage {
+    height: 24rem;
+    }
+
+    /* team section */
+
+    /* flex arrangements */
+
+    .teamcontainer {
+        display: flex;
+       
+        flex-basis: auto;
+        justify-content: space-between;
+        padding-bottom: 0rem;
+        margin-bottom: 0rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .teamitem:nth-child(1) {
+        flex: 52%;
+        order: 1;
+    }
+
+    .teamitem:nth-child(2) {
+        flex: 50%;
+        order: 2;
+    }
+
+    .teamitemv:nth-child(1) {
+        flex: 52%;
+        order: 2;
+       
+    }
+
+    .teamitemv:nth-child(2) {
+        flex: 50%;
+        order: 1;
+    }
+
+    /* team section styling */
+
+    .teamheader {
+        line-height: 4rem;
+    }
+    /* team image styling, removing excess padding */
+
+    .teamimg {
+        padding-bottom: 0rem;
+    }
+
+    /* contact grid*/
+
+    /* lines up margins with team section, based off 1920x1080 viewing */
+
+    .contactsection {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-bottom: 0rem;
+    }
+
+    /* sets container to display grid, declares amount of rows and columns */
+    .contactcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.2fr 1fr 0.5fr;
+    }
+
+    /* header sets above form */
+    .contactitem:nth-child(1){
+       grid-column: 1 / 1;
+       grid-row: 1 / 1;
+    }
+
+    /* form sets on left column below contact us */
+    .contactitem:nth-child(2){
+       grid-column: 1;
+       grid-row: 2;
+    }
+
+    /* sets location to display on right column beside form */
+    .contactitem:nth-child(3){
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+
+    /* sets timetable to stretch across bottom row */
+    .contactitem:nth-child(4){
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    /* contact styling */
+    
+    table, th, td {
+        padding-bottom: 0rem;
+    }
+    /* footer styling */
+    .footerone p{
+        margin-left: 4rem;
+        
+    }
+    .footerone a{
+        text-decoration:underline;
+    }
+}   
