@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* 1st import: adding the 'Lato' Google font family to stylesheet. 2nd import: Adding the 'Catamaran' Google font family to stylesheet. Will be used for smaller text pieces, <p> tags. */
+
+/* Meyer Web CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom CSS Styling */
+
+
+
+/* Setting the default html font-family to Lato with a fallback on sans-serif for elements who inherit font. */
+
+html {
+	font-family: Lato, sans-serif;
+	
+}
+
+body #main{
+	max-width:none;
+	background-color: white;;
+}
+
+
+/* Changing the font family for the headings of the webpage to be consistent and in the same family, lato. Sans-serif is added as a fallback font. Adjusting default font-weight and color. Description applies to h2 styling as well.*/
+
+h1 {
+    font-family: Lato, sans-serif;
+    font-weight: 600;
+	color:rgb(32, 32, 32);
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+}
+
+h2 {
+    font-family: Lato, sans-serif;
+    color:rgb(34, 34, 34);
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+
+/* Adjusting font family for <p> tags. Changed to 'Catamaran' Google font family. Adjusting default font-weight. */
+
+p {
+    font-family: Catamaran, sans-serif;
+    font-weight: 100;
+	color:rgb(32, 32, 32);	
+}
+
+
+/* Adjusting nav bar section of page by using a higher specifity selector than the base stylesheet. */
+
+nav#nav {
+	width:100%;
+	background-color:rgb(34, 34, 34);
+	border: none;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 1rem;
+	margin: 0rem;
+	box-sizing: border-box;
+}
+
+/* Adjusting the individual links on the nav bar, set to a higher specifity than the base stylesheet to allow adjustments. Display set to inline block to prevent overlapping when display's width is too narrow. */
+
+body .nav .nav-link{
+	color:white;
+	border: 1px solid white;
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+	display: inline-block;
+}
+
+
+/* Adjusting home section of page by using a higher specifity selector than the base stylesheet.  */
+
+section#home{
+	font-size: 1rem;
+	background-color: white;
+	border: 1px solid #999;
+	border-bottom: 0px;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+
+section#home h1{
+	padding-bottom: 1.5rem;
+}
+
+
+/* Adjusting About Me section and elements by using a higher specifity selector than the base stylesheet. */
+
+section#about{
+	background-color: rgb(255, 255, 255);
+	border: 1px solid #999;
+	border-bottom: 0px;
+	text-align:center;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+section#about h2{
+	font-size: 2rem;
+	justify-content: center;
+}
+
+section#about p{
+	font-size: 1rem;
+	padding: 0.5rem;
+	
+}
+
+
+/* Adjusting the image listed in the about section through a higher specifity selector than the base stylesheet. Key adjustments include reducing the saturation to appear more professional, creating a circular border around the base image, and ensuring the image stays centered regardless of the page resolution. */
+
+section .about-image{
+	float: none;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	display: inline-block;
+	border: 2px solid rgb(32, 32, 32);
+	border-radius: 50%;
+	background-color: rgb(232, 255, 252);
+	filter: saturate(50%);
+}
+
+
+/* Adjusting Contact section and elements by using a higher specifity selected than the base stylesheet. Box-sizing property used to prevent overextension of elements and to make sizing the following elements easier. */
+
+section#contact{
+	background-color: rgb(255, 255, 255);
+	border: 1px solid #999;
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+	text-align: center;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+section#contact h2{
+	font-size: 2rem;
+	justify-content: center;
+	padding-bottom: 2rem;
+}
+
+section#contact p{
+	font-size: 1rem;
+	padding: 1rem;
+	padding-bottom: 3rem;
+}
+
+
+/* Adjusting Contact Form section and elements inside by using a higher specifity selected than the base stylesheet. Additional border added for the contact form for sectioning clarity, along with text adjustments (uppercase, aligning to center) and padding adjustments. Both for aesthetic and alignment reasons. */
+
+form.contact-form{
+	background-color:white;
+	border: 1px solid #999;
+	border-bottom: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	width: 100%;
+	text-transform: uppercase;
+	text-align: center;
+	box-sizing: border-box;
+	font-size: 1rem;
+	padding-right: 3rem;
+	padding-left: 1.7rem;
+	padding-top: 2rem;
+}
+
+
+/* Label set to display: block along with a margin on all sides to create an efficient spacing between the label and input forms. Chosen for aesthetic and clarity reasons. */
+
+.contact-form-label{
+	margin: 1rem;
+	display:block;
+}
+
+
+/* Style adjustments to the form submit button, such as changing the font family, font color, and font to uppercase to blend in with the overall site aesthetic. */
+
+.contact-form button{
+	margin: 1rem;
+	text-transform: uppercase;
+	border: 1px solid rgb(32, 32, 32);
+	padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+	background: none;
+	font-family: Lato, sans-serif;
+}
+
+
+/* Adjusting Footer section, includes alignment, font styling, background color changes.*/
+
+footer {
+	text-align: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	text-transform: uppercase;
+	background-color: rgb(32, 32, 32);
+}
+
+
+/* General aesthetic adjustments to the paragraph tags in the footer section for the mobile view. Set font color to white to contrast against the black background of the section. */
+
+footer p{
+	font-weight: 500;
+	color: white;
+	padding: 0.5rem;
+}
+
+
+/* Media query for screen sizes at least 768px and up. Contains adjustments to make desktop more visually appealing. */
+
+@media screen and (min-width: 786px) {
+	
+	/* Increasing the size of the home section main header for dekstop view, along with increasing the font tracking to be more spacious. */
+
+	section#home h1 {
+		font-size: 4rem;
+		letter-spacing: 1rem;
+	}
+
+
+	/* Adjusting header two font tracking of sections about & contact to match the desktop aesthetic. */
+
+	section#about h2{
+		letter-spacing: 0.5rem;
+	}
+
+	section#contact h2{
+		letter-spacing: 0.5rem;
+	}
+
+
+	/* Adjusting padding of the paragraphs used in the home, about, and contact section for dekstop view to take advantage of more white space compared to the mobile view, this is an aesthetic choice. */
+
+	section#home p{
+		padding-left: 10rem;
+		padding-right: 10rem;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+
+	section#about p{
+		padding-left: 10rem;
+		padding-right: 10rem;
+		padding-top: 2rem;
+		padding-bottom: 0rem;
+		
+	}
+
+	section#contact p{
+		padding-left: 10rem;
+		padding-right: 10rem;
+	}
+
+
+	/* Aligning the nav bar to the left side of the desktop view when user resolution reaches media query guidelines. Chose for aesthetic & clarity reasons. */
+
+	nav#nav{
+		text-align: left;
+	}
+
+
+	/* Adjusting image used in the about section, such as shrinking the overall size to fit a desktop view, and adjusting the margins to fit the new desktop formatting. */
+
+	section .about-image{
+		width: 200px;
+		padding-top: 0rem;
+		margin-bottom: 0rem;
+		margin-top: 2rem;
+	}
+
+
+	/* Adding a responsive button color change whenever the user hovers over the element with their cursor. Not needed on mobile and iPad resolutions as it is touch-based rather than using a cursor. */
+
+	.contact-form button:hover{
+		background-color: rgb(226, 226, 226);
+	}
+
+	
+	/* Adding styling to the nav anchor links to change background color based on if the user's mouse is hovering over the specific <a> tag or not. Not needed on mobile and iPad resolutions as it is touch-based rather than using a cursor. */
+
+	body .nav .nav-link:hover{
+		background-color: rgb(77, 77, 77);
+	}
+
+
+	/* Adjusts padding around the footer content to reduce size usage on desktop view. */
+
+	footer {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+
+	/* Reduces font size of footer for desktop view. */
+	
+	footer p{
+		font-size: 0.7rem;
+	}
+}
