@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import above is adding the 'Montserrat' font family to the webpage. */
+
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* CSS reset above, styling below. */
+
+/* Setting base HTML font to correct family, setting root font size for rem usage in more specified adjustments to text. Base color for text is added. */
+html {
+    font-family: 'Montserrat', sans-serif;
+	font-size: 100%;
+	color: #333131;
+}
+/* Sets the background color of the body section, which is the main part of the website. Done to match the visual mockup. */
+body {
+	background-color: #f7f7ff;
+}
+/* Sets the display of the image to block alongside with margin:auto and width adjustments to ensure the image stays vertically aligned in the center despite scale adjustments with width. */
+.scooterbgimage {
+	display: block;
+	width:90%;
+	margin:auto;
+}
+/* Setting the baseline visual adjustments to the <p> element, such as font weight, size, height, and basic margin adjustments that can be adjusted later with more specific classes. Sets a strong and consistent default baseline. */
+p {
+	font-weight: 500;
+	font-size: 0.9rem;
+	margin-top: 0.8rem;
+	margin-bottom: 0.8rem;
+	margin-right: 1rem;
+	line-height: 1rem;	
+}
+/* h1 styling to match the aesthetic choice of the mockup. Involves adjustments to font size, height, and weight. */
+h1 {
+	font-size: 4rem;
+	font-weight: 700;
+	line-height: 4.5rem;
+}
+
+/* Margin adjustments of the primary h1 of the website. Put in class as proper spacing varies based on what heading is in question and their place on the website.  */
+.bodyheaderone{
+	margin-left: 1rem;
+	margin-top: 1rem;
+	margin-right: 1rem;
+}
+h2 {
+	font-weight: 700;
+	font-size: 2.5rem;
+}
+/* Styling for the "apply now" header of the apply section. Done to align the header with the rest of the content. */
+.bodyheadertwo {
+	text-align: left;
+	margin-left: 1rem;
+}
+/* setting a baseline for h4 styling to match the aesthetic choices of the mockup. Furthur styling will be done in more specific cases. */
+h4 {
+	font-size: 1.2rem;
+	font-weight: 500;
+	line-height: 1.2rem;
+}
+/* More detailed styling of the main bodies h4 tag. */
+.bodyheaderfour {
+	margin-left: 1rem;
+	margin-top: 0.5rem;
+	margin-right: 3rem;
+	margin-bottom: 1rem;
+}
+/* base button styling with the purpose of setting a common baseline appearance for all button elements on the webpage. furthur specific styling will be adjusted using specific classes. */
+button {
+	color:#333131;
+	border:none;
+	padding: 0.5rem 2rem 0.5rem 2rem;
+	border-radius: 7px;
+	text-transform: uppercase;
+	font-family: inherit;
+	font-weight: bold;
+}
+/* Visual adjustments to the "DRIVE WITH US" button to match the visual mockup, such as changing the background color, font weight, size, overall width, and height.  */
+.drivebutton {
+	background-color: #57eeab;
+	font-weight: 700;
+	font-size: 1.3rem;
+	width: 90%;
+	height: 3rem;
+}
+/* Setting a baseline color for the inputs, alongside removing borders, adjusting the font weight, increasing the height, and rounding off the sides of the input fields using border-radius. Margin adjustments to ensure content lines up with other elements in the section. */
+input {
+	background-color: #f4f4f5;
+	border: none;
+	border-radius: 0.5rem;
+	margin-bottom: 0.8rem;
+	height: 2rem;
+	font-family: inherit;
+	font-weight: 500;
+	padding-left: 0.5rem;
+}
+/* Adjusting the width of the mobile input forms in the "Apply now" section with the purpose of matching the visual mockup. */
+body section div form div input {
+	width: 87%;
+}
+/* Hover function added to the text inputs as the mockup uses different shades of grey on the inputs, assumingly to show what happens when a user hovers over the element. */
+input:hover {
+	background-color: #F7f7ff;
+}
+/* styling for the logo placed on the top banner, includes size and position adjustments for aesthetic purposes. */
+.bannerlogo {
+	width: 30%;
+	height: auto;
+	margin-left: 1rem;
+	margin-top: 0.5rem;
+}
+/* Setting the background-color of the apply now container to match the visual mockup, alongside a radial shadow in the background, and margin adjustments. */
+.applyformcontainer {
+	margin-top: 1rem;
+	background-color: #ffffff;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	margin-bottom: 3rem;
+	border-radius: 1rem;
+	box-shadow: 8px 5px 25px -10px #333131;
+}
+/* Sorting all elements inside the apply container to align in the center, alongside padding on the top and bottom to match the visual mockup */
+.applyformcontents {
+	padding-top: 1rem;
+	text-align: center;
+	padding-bottom: 1rem;
+}
+/* Creating a grid container for the checkbox and label form to  */
+.checkboxgridcontainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	text-align: left;
+}
+/* Assigns the checkbox lable to spread from columns two to eight, alongside margin adjustments to ensure it matches the visual mockup. */
+.checkboxgriditemone {
+	grid-column: 2 / 8;
+	margin-top: 0.5rem;
+	margin-left: 1rem;
+}
+/* Assigns the checkbox input to the first column, and first row of the grid. Height and margin-left are added for alignment and sizing aesthetic choices. */
+.checkboxgriditemtwo {
+	grid-column: 1;
+	grid-row: 1;
+	margin-left: 1rem;
+	height: 1.5rem;
+}
+/* Custom styling to adjust paragraph contents to the left with margins to fit the container properly. Purpose of matching the aesthetic choices of the mockup. */
+.leftp {
+	text-align: left;
+	margin-left: 1rem;
+}
+/* Set to display: none as this text will be used in the desktop view rather than .leftp */
+.desktopleftp {
+	text-align: left;
+	display: none;
+	margin-left: 1rem;
+}
+/* Aligns the "already applied" text in the apply now container to the left, along with a margin-left adjustment to ensure it lines up vertically with the other content in the section */
+.applicationp {
+	text-align: left;
+	margin-left: 1rem;
+}
+/* Setting the text in the "Already applied" element inside the apply now container to change to red halfway through using a span tag inside the <p> element.  */
+.redtext {
+	color: #ff8480;
+}
+/* baseline adjustments to the footer element. */
+footer {
+	background-color: #fffd8c;
+}
+/* Setting the overall text inside the container to align to the left alongside with padding adjustments to match the visual mockup. */
+.footerstyling {
+	text-align: left;
+	padding-top: 0.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 0.5rem;
+}
+/* Visual adjustments to the main footer header, such as increasing the font-weight, size, line-height, and margin-right for visual reasons.  */
+.footerboldp {
+	font-weight: 700;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	margin-right: 2rem;
+}
+/* Visual adjusments to the calculate button, such as adjusting its background-color, font-weight, color, font-size, height, and line-height to match the visual mockup. Margin: auto is used to ensure the element is centered. */
+.calculatebutton{
+	background-color: #ff8480;
+	font-weight: 700;
+	color:#F7f7ff;
+	font-size: 1.4rem;
+	width: 100%;
+	margin: auto;
+	height: 2.5rem;
+	line-height: 1rem;
+}
+/* Setting the container for the footer inputs to display: grid to create an effective grid for responsive sorting and adjustments. First column is 55px to ensure the "hours" input is smaller than the rest and matches the visual mockup. Grid-gap is added for a space between each input/button to match the mockup as well. */
+.footergridcontainer {
+	display: grid;
+	grid-template-columns: 55px 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 0.5rem;
+}
+/* Assigning the first grid item, the hours input, to start on column one and end one column one. Set on the first row of the grid. Done for visual clarity reasons */
+.footergriditemone {
+	grid-column: 1;
+	grid-row: 1;
+	
+}
+/* Assigning the second grid item, the city input, to start on column two and end on column five. Set on the first row of the grid. Done for visual clarity reasons. */
+.footergriditemtwo {
+	grid-column: 2 / 5;
+	grid-row: 1;
+}
+/* Assigning the third grid item, the calculate button, to start on column one and end on column five. Set on the 2nd row of the grid as well. Done for visual clarity reasons. */
+.footergriditemthree {
+	grid-column: 1 / 5;
+	grid-row: 2;
+}
+/* adjusting display to flex for the icon container in order to add the space around property, evenly spacing the icons out on the footer to match the original mockup. margins are added for vertical spacing between seperate elements. */
+.footericons{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+/* small catch, mockup has rounded off the originally square facebook logo to a nice circle. styling below adds that to match. */
+.footerfacebooklogo {
+	border-radius: 50%;
+}
+/* media query for tablet view, website is developed mobile-first so mobile is the base. */
+@media screen and (min-width: 768px) {
+	/* Size adjustments to the top-left banner logo using width and adding margin adjustments to ensure proper spacing in relation to the other elements for the tablet view. */
+	.bannerlogo {
+		width: 12%;
+		margin-left: 5rem;
+	}
+	/* Margin adjustments to the main heading (Want to be your own boss?) to ensure proper spacing in relation to the other elements for the tablet view. */
+	.bodyheaderone {
+		margin-left: 5rem;
+		margin-right: 15rem;
+	}
+	/* Margin adjustments to the main subheading ("Start today..") to ensure proper spacing in relation to the other elements for the tablet view. */
+	.bodyheaderfour {
+		margin-left: 5rem;
+		margin-right: 12rem;
+		margin-top: 1.5rem;
+	}
+	/* Adjusts the scooter background image to match the tablet mockup, and properly fit amongst the other elements on the page body. */
+	.scooterbgimage {
+		width: 60%;
+	}
+	/* Adjustments to the apply form container such as using margin-auto to center the section on the page, adding margins on the top and bottom for space inbetween other seperate, but main content. Padding is added on the inside for more white space.  */
+	.applyformcontainer {
+		width: 83%;
+		margin: auto;
+		margin-top: 2rem;
+		margin-bottom: 5rem;
+		padding-top: 1rem;
+	}
+	/* Removes the previous margin-left on the tablet view for the checkbox field. */
+	.checkboxgriditemone{
+		margin-left: 0rem;
+	}
+	/* Adjusts the children of the flex container to space-evenly between themselves, alongside width adjustments for proper scaling. */
+	.footericons {
+		justify-content: space-evenly;
+		width:50%;	
+	}
+	/* Sets the parent container of the icon group to display-flex in order to align the content to the center using justify-content: centre. Done for aesthetic reasons to match the mock up. */
+	.footericonsparent {
+		display: flex;
+		justify-content: center;
+	}
+	/* Adjusts the text input sections of the apply now form to have a larger individual height for submission alonside font adjustments. Done for aesthetic reasons.  */
+	.applytextinput {
+		height: 3rem;
+		font-size: 1rem;
+	}
+	/* Adjusts the "apply now" main heading of the apply form section with a smaller font size, along with margin-left to align with the rest of the content in the section */
+	.bodyheadertwo {
+		margin-left: 2rem;
+		font-size: 2rem;
+	}
+	/* Adjusts the "enter your info below" subheading to have a bigger font size, with margins on the top and bottom for visual clarity. Margin-left added to align with the rest of the content in the section. */
+	.leftp {
+		margin-left: 2rem;
+		font-size: 1.5rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+	/* Adding base styles to an alternate text to the "enter your info" subheading that will be visible during the desktop mockup. Currently set to display: none so it doesn't appear on the other displays. */
+	.desktopleftp {
+		margin-left: 2rem;
+		font-size: 1.5rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		display: none;
+	}
+	/* Adjusts the "already applied?" subtext on the bottom of the apply now form to align in the center, a smaller font size, and more of a margin on the bottom for aesthetic reasons. */
+	.applicationp {
+		text-align: center;
+		font-size: 1rem;
+		margin-bottom: 1.5rem;
+	}
+	/* Adding a margin-left property to the earn section of the footer to align it to the mockup.  */
+	.footerearnstyling {
+		margin-left: 3rem;
+	}
+	/* Adjusting grid to properly rearrange the calculate form located on the footer. Contains setting the first column width and letting the rest autofill, then defining the areas which each input element & button will be placed. Width is to match the apply form in terms of overall width. Grid gap is to match aesthetic choices of the mockup. */
+	.footergridcontainer {
+		grid-template-columns: 110px;
+		grid-template-rows: 1fr;
+		grid-template-areas: 
+		"hours city city city calculate calculate";
+		width: 92%;
+		grid-gap: 1rem;
+	}
+	/* Assigning the first grid item of the footer, hours input, to the proper grid area. */
+	.footergriditemone {
+		grid-area: hours;
+	}
+	/* Assigning the second grid item of the footer, city input, to the proper grid area. */
+	.footergriditemtwo {
+		grid-area: city;
+	}
+	/* Assigning the third grid item of the footer, calculate button, to the proper grid area. */
+	.footergriditemthree {
+		grid-area: calculate
+	}
+	/* Adjustments for the calculate button to be the same height as the first two inputs. Removes margin auto and shrinks the height for a visual consistency.  */
+	.calculatebutton {
+		margin: 0;
+		height: 2rem;
+}
+/* media query for desktop view. */
+@media screen and (min-width: 1024px) {
+ 	/* Setting out a grid to rearrange the essential elements to fit a desktop view. Involves creating a descriptive template area, along with defining a 3x2 grid, where the first row is thinner than the other as the first row only has the banner logo.  */
+	.bodygrid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 250px 1fr;
+		grid-template-areas: 
+		"logo none none"
+		"bossheading backgroundimg applynow";
+		padding-bottom: 5.5rem;
+	}
+	/* Assigning the banner logo section to the grid area of "logo" in order to properly sort and format the content into the grid container. */
+	.bodygriditemone {
+		grid-area: logo;
+	}
+	/* Assigning the main heading section to the grid area of "bossheading" in order to properly sort and format the content into the grid container. */
+	.bodygriditemtwo {
+		grid-area: bossheading;
+	}
+	/* Assigning the background image to the grid area of "backgroundimg in order to properly sort and format the content into the grid container. */
+	.bodygriditemthree {
+		grid-area: backgroundimg;
+	}
+	/* Assigning the apply section to the grid area of "applynow" in order to properly sort and format the content into the grid container. */
+	.bodygriditemfour {
+		grid-area: applynow;
+	}
+	/* Adjustments to the banner logo to match the aesthetic choices and positioning of the mockup. Involves adjusting the width to scale and adjusting margins. */
+	.bannerlogo {
+		width: 18%;
+		margin-left: 10rem;
+		margin-top: 2rem;
+	}
+	/* Adjusting the main header of the website to fit the desktop view, involves lining up the text using margin-left, increasing the font-size, and increasing the line height to ensure the text doesn't overlap vertically */
+	.bodyheaderone {
+		font-size: 5rem;
+		margin-right:0rem;
+		margin-left: 10rem;
+		line-height: 6rem;
+	}
+	/* Adjusting the main subtitle heading to fit the desktop mockup, such as reducing the font-size, increasing the line-height, and aligning it vertically using margin-left. */
+	.bodyheaderfour {
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		margin-right: 0rem;
+		margin-left: 10rem;
+	}
+	/* Adjusting the scale of the background image to match the aesthetic guidelines of the mockup. Ensuring that there is proper space between it and the footer below using margin-bottom. */
+	.scooterbgimage {
+		width: 120%;
+		margin-bottom: 5rem;
+	}
+	/* Adjusting the overall width of the "apply now" section to match the desktop design choices, along with using margin-right to align the content to the right side of the site. */
+	.applyformcontainer {
+		margin-right: 10rem;
+		width: 80%;
+	}
+	/* Setting initial paragraph under "apply now" heading to display: none in order to remove it from the desktop view in favor of the adjusted text version below. */
+	.leftp {
+		display: none;
+	}
+	/* Setting desktop paragraph under "apply now" to display: block in order to make it visible and replace the previous paragraph to match the desktop changes of the mockup compared to the previous displays. */
+	.desktopleftp {
+		display: block;	
+	}
+	/* increasing size of button font and changing the desktop version of the button to inherit the default button height to ensure that there is equal space between the text. */
+	.drivebutton {
+		font-size: 2rem;
+		height: inherit
+	}
+	/* Adjusting margin-top to match aesthetic choices of mockup. */
+	.applicationp {
+		margin-top: 1rem;
+	}
+	/* Adjustments to the earning & input form group such as adding margin-left to vertically align with the main body contents on the left, and top padding to ensure the content in the footer stays balanced on the horizontal axis */
+	.footerearnstyling {
+		margin-left: 10rem;
+		padding-top: 1.5rem;
+	}
+	/* Increases size of the non-bold <p> tag in the footer to match the design choices of the mockup. */
+	.footerregp {
+		font-size: 1rem;
+	}
+	/* Adjusting width of the input forms to match the aestehtic choices of the mockup. */
+	.footergridcontainer {
+		width: 35%;
+	}
+	/* Adjustments to the icon group's parent container on the footer to arrange it at the right-hand side of the page using flex-end. Items are then centered and added padding on the topto ensure it stays in the middle of the horizontal axis. */
+	.footericonsparent {
+		justify-content: flex-end;
+		align-items: center;
+		padding-top: 1rem;
+	}
+	.footericons {
+		justify-content: space-between;
+		width: 40%;
+		margin-right: 7rem;
+	}
+	/* Creates a grid that sorts the footer content on a horizontal row, seperated in thirds to place the input form on one side and the icon on the other, matching the mockup.  */
+	.gridfooter {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas:
+			"form none icons"
+	}
+	/* Assigning the first grid item, the input forms to the "form" area in the grid container. */
+	.gridfooterone {
+		grid-area: form;
+	}
+	/* Assigning the second grid item, the icon group to the "icons" area in the grid container. */
+	.gridfootertwo {
+		grid-area: icons;
+	}
+}
+}

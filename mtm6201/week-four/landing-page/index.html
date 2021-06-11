@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- adds favicon, purpose of displaying the brand logo on the browser's overhead tab row. -->
+    <link rel="shortcut icon" href="master-files-landing-page/images/favicon.ico">
+</head>
+<body>
+    <!-- div with the purpose of being used as the grid class for the body contents -->
+    <div class="bodygrid">
+        <!-- header includes brand logo -->
+        <header class="bodygriditemone">
+            <img src="master-files-landing-page/images/logo/logo.png" alt="Dash Logo" class="bannerlogo">
+        </header>
+        <!-- section includes advertisement headings + catchphrase -->
+        <section class="bodygriditemtwo">
+            <h1 class="bodyheaderone">Want to be your own boss?</h1>
+            <h4 class="bodyheaderfour">Start today and make up to $30/hr driving your own vehicle with Dash!</h4>
+        </section>
+        <img src="master-files-landing-page/images/bg-image/scooter.svg" alt="Scooter background image cla" class="bodygriditemthree scooterbgimage">
+        <!-- section includes "apply now" form, used to properly seperate form from other primary elements on the page -->
+        <section class="bodygriditemfour applyformcontainer">
+            <div class="applyformcontents">
+                <h2 class="bodyheadertwo">Apply Now</h2>
+                <p class="leftp">Enter your info below.</p>
+                <p class="desktopleftp">Enter your info below to get started.</p>
+                <form action="applynow.html" method="POST">
+                    <div>
+                        <input type="text" placeholder="First name" id="firstname" class="applytextinput">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Last name" id="lastname" class="applytextinput">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Phone number" id="phonehumber" class="applytextinput">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Email Address" class="applytextinput">
+                    </div>
+                    <div class="checkboxgridcontainer">
+                        <label for="dashterms" class="checkboxgriditemone">I agree to dash terms</label>
+                        <input type="checkbox" id="dashterms" class="checkboxgriditemtwo">
+                    </div>
+                <button class="drivebutton">Drive with us</button>
+                </form>
+                <p class="applicationp"> Already applied? <span class="redtext"> Check your application status here </span> </p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <!-- div with the purpose of being used as the grid class for the footer contents -->
+        <div class="gridfooter footerstyling">
+            <!-- first div includes calculate form and text content -->
+            <div class="footerearnstyling gridfooterone">
+                <p class="footerboldp">See how much you can earn with Dash.</p>
+                <p class="footerregp">How many hours do you want to drive with us this week?</p>
+                <form action="calculate.html" method="POST" class="footergridcontainer">
+                    <input type="text" placeholder="Hours" id="hours" class="hoursinput footergriditemone">
+                    <input type="text" placeholder="City" id="city" class="footergriditemtwo">
+                    <button class="calculatebutton footergriditemthree">Calculate</button>
+                </form>
+            </div>
+            <!-- second div includes social media logos -->
+            <div class="footericonsparent gridfootertwo">
+                <div class="footericons">
+                    <img src="master-files-landing-page/images/icons/facebook.svg" alt="Facebook logo" class="footerfacebooklogo">
+                    <img src="master-files-landing-page/images/icons/instagram.svg" alt="Instagram logo">
+                    <img src="master-files-landing-page/images/icons/twitter.svg" alt="Twitter logo" class="footertwitterlogo">
+                    <img src="master-files-landing-page/images/icons/linkedin.svg" alt="linkedin logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
