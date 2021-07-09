@@ -1,0 +1,914 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+/* FONT IMPORTS ABOVE */
+
+:root {
+	--primary-color: #726CC8;
+	--secondary-color: #aed3ff;
+	--cursive-font: 'Pacifico', cursive, sans-serif;
+	--text-font: 'Source Sans Pro', sans-serif;
+}
+
+/* CSS RESET BELOW */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* CSS RESET ABOVE */
+
+/* CSS STYLING BELOW */
+
+/* /// GLOBAL ELEMENT STYLING BELOW /// */
+
+html {
+	background-color: #f4faff;
+	height: 100%;
+	
+}
+/* Set to position: relative to ensure the footer stays at the bottom of the container always, which is the body & html of this website. */
+html,body {
+	position:relative;
+}
+h1, h2 {
+    font-family: var(--cursive-font);
+}
+h1 {
+	text-align: center;
+	font-size: 2.5rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+h2 {
+	font-size: 1.5rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+table, td, th, tr {
+	font-family: var(--text-font);
+	color: var(--primary-color);
+	font-weight: 600;
+	line-height: 2rem;
+}
+/* Ensuring each cell has a seperate border and then using border spacing to space out the cells to prevent overlap. Modified later in furthur media queries below.  */
+table {
+	border-collapse: separate;
+	border-spacing: 0.5rem 0;
+}
+p {
+	font-size: 0.8rem;
+	color: var(--primary-color);
+	font-family: var(--text-font);
+	font-style: italic;
+	font-weight: 600;
+	line-height: 1rem;
+}
+a {
+    font-family: var(--text-font);
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+button {
+	font-family: var(--text-font);
+	font-weight: 700;
+	font-size: 1.3rem;
+	color: #ffffff;
+	background-color: var(--primary-color);
+	border: none;
+	border-radius: 50px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+label {
+	font-family: var(--text-font);
+	font-weight: 800;
+	color: var(--primary-color)
+}
+input {
+	font-family: var(--text-font);
+	font-weight: 600;
+	font-style: italic;
+}
+textarea {
+	font-family: var(--text-font);
+	font-weight: 600;
+	font-style: italic;
+}
+/* /// BROAD ELEMENT STYLING ABOVE /// */
+
+/* /// HOVER STYLING BELOW (ANIMATIONS AT LATER SECTIONS) /// */
+
+a:hover {
+    color: var(--secondary-color);
+}
+.footericon:hover {
+	color: var(--secondary-color);
+}
+
+/* /// HOVER STYLING ABOVE /// */
+
+/* Although there is no visual border in this styled HR class, border-radius still effictively softens the corners of the HR element. Used to match the visual design of the mockup. */
+.purplenavhr {
+	background-color: var(--primary-color);
+	height: 2px;
+	width: 60%;
+	margin: auto;
+	border: none;
+	border-radius: 20%;
+}
+.purplehr{
+	background-color: var(--primary-color);
+	height: 3px;
+	width: 80%;
+	border: none;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.bluehr {
+	background-color: var(--secondary-color);
+	height: 3px;
+	width: 80%;
+	margin: auto;
+	border: none;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.purpleheading {
+	color: var(--primary-color);
+}
+.blueheading {
+	color: var(--secondary-color);
+}
+
+/* /// NAVBAR STYLING BELOW /// */
+/* Basic styling to the burger bar menu icon to fit the mockup aesthetic. Cursor: pointer; used to help users know it is clickable. */
+.burgerbars {
+	color: var(--primary-color);
+	font-size: 2.2rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	margin-left: -2rem;
+	display: block;
+	cursor: pointer;
+}
+/* Assigning a grid to the nav container, will be a 3 column 2 grid arrangement to ensure responsive nav bar, along with a efficient burger menu toggle. Hieght & line-height are used to ensure the elements are the proper height in relation to the page along with whitespace.  */
+.navgridcontainer {
+	background-color: #ffffff;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "burger logo empty";
+	justify-items: center;
+	text-align: center;
+	padding-bottom: 1rem;
+	height: 80px;
+	line-height: 80px;
+	font-size: 26px;
+}
+.navgriditemone {
+	grid-area: burger;
+}
+.navgriditemtwo {
+	grid-area: logo;
+}
+/* Arranging the third nav grid item, which are the navcontents, to be placed on the second grid row, starting at 1 and span to 3 to fill out the complete row. */
+.navgriditemthree {
+	grid-row: 2;
+	grid-column: 1 / span 3;
+}
+/* Setting display: grid to the anchor tag which is acting as container for the nav logo. Ensures logo is centered horizontally without using lesser responsive displays such as block. */
+.logogrid {
+	display: grid;
+}
+.navlogo {
+	max-width: 100%;
+	max-height: 50px;
+	margin: auto;
+}
+/* Setting base styling for the contents in the nav, which are the anchor links to the other website pages. Display is set to none as a base as the checkbox input will serve as a toggle for the visibility of said container. Using primary color variable rather than rgb for ease of access & change in future versions. Width is 100% to fill out the entire horizontal plane with background color. z-index: 1 is used to ensure that the nav contents always appear above any latter elements on the that follow below on the page. */
+.navcontents {	
+	background-color: #ffffff;
+	width: 100%;
+	display: none;
+	border-top: 0.2rem solid var(--primary-color);
+	border-bottom: 0.2rem solid var(--primary-color);
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	z-index: 1;
+}
+.navcontents a {
+	font-size: 1.6rem;
+}
+/* Checkbox is set to display: none to hide element as the label will be the toggle-able elemene for the user. Cursor: pointer is applied to the checkbox for accesibility.  */
+#burgercheck {
+	display: none;
+}
+/* Once the burger menu icon is clicked, the checkbox is toggled and the contents inside the nav appear through a change of display from none to block. Once unchecked, contents dissapear once again. */
+#burgercheck:checked + .navcontents {
+	display: block;
+}
+
+/* /// NAVBAR STYLING ABOVE /// */
+
+/* /// BANNER IMAGE STYLING BELOW /// */
+
+/* Defining the width and height of the image container */
+.bannerimagecontainer {
+	width: 100%;
+	height: 190px;
+	margin-bottom: 3rem;
+}
+/* Setting image in the container to object-fit: cover to ensure it fills to the container size and doesn't stretch it's original aspect ratio */
+.bannerimage {
+	width: 100%;
+	height: 100%;
+	border-top: 0.3rem solid var(--secondary-color);
+	border-bottom: 0.3rem solid var(--secondary-color);
+	object-fit: cover;
+}
+
+/* /// HOMEPAGE STYLING BELOW /// */
+
+/* Setting mobile dimensions for image container */
+.homeimagecontainer {
+	width: 150px;
+	height: 150px;
+}
+/* Image set to cover inside a container so the image fills inside the set frame instead of badly resizing. */
+.homeimage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 60px;
+}
+/* Setting out the 10 row grid arrangement for the homepage. Involves utilizing the grid-template-areas styling property to accurately lay out each element along the website vertically.  */
+.homepagegridcontainer {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 5rem 4rem 10rem 4rem 0.2rem 5rem 4rem 10rem 4rem 10rem;
+	grid-template-areas: 
+	"hdrone hdrone"
+	"hrone hrone"
+	"pone ione"
+	"bone ."
+	"hrtwo hrtwo"
+	"hdrtwo hdrtwo"
+	"hrthree hrthree"
+	"itwo ptwo"
+	". btwo"
+	"hrfour hrfour";
+	grid-row-gap: 8px;
+	grid-column-gap: 8px;
+}
+.homegriditemone {
+	grid-area: hdrone;
+	margin-top: 0.5rem;
+}
+.homegriditemtwo {
+	grid-area: hrone;
+}
+.homegriditemthree {
+	grid-area: pone;
+	margin-left: 2.5rem;
+}
+.homegriditemfour {
+	grid-area: ione;
+	margin-left: 1rem;
+}
+.homegriditemfive {
+	grid-area: bone;
+	margin-left: 2.5rem;
+	width: 85%;
+	max-width: 40rem;
+}
+.homegriditemsix {
+	grid-area: hrtwo;
+}
+.homegriditemseven {
+	grid-area: hdrtwo;
+}
+.homegriditemeight {
+	grid-area: hrthree;
+}
+.homegriditemnine {
+	grid-area: itwo;
+	margin-left: 2.5rem;
+}
+.homegriditemten {
+	grid-area: ptwo;
+	margin-right: 2.5rem;
+}
+.homegriditemeleven {
+	grid-area: btwo;
+	width: 85%;
+	max-width: 40rem;
+}
+.homegriditemtwelve {
+	grid-area: hrfour;
+}
+.purplehomepagebtn {
+	background-color: var(--primary-color);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	color: white;
+	border-radius: 2rem;
+	text-align: center;
+	padding-top: 0.3rem;
+}
+.bluehomepagebtn {
+	background-color: var(--secondary-color);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	color: white;
+	border-radius: 2rem;
+	text-align: center;
+	padding-top: 0.3rem;
+}
+
+/* /// HOMEPAGE STYLING ABOVE /// */
+
+/* /// FLAVOURS STYLING BELOW /// */
+
+.flavourimage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 60px;
+	border: 2px solid var(--primary-color);
+}
+/* Setting a grid to arrange the flavours in a vertical column, centered in the middle. minmax is used to efficiently set a max value of each column with min set to auto in order to maintain centered and balanced grid content. */
+.flavourgridcontainer {
+	width: 100%;
+	display: grid;
+	grid-template-columns: minmax(auto, 10%) minmax(auto, 80%) minmax(auto, 10%);
+	grid-template-rows: 1rem 0rem 18rem 18rem 18rem 18rem 18rem 18rem 3rem;
+	grid-template-areas: "hdrone hdrone hdrone"
+	"hrone hrone hrone"
+	". fvone ."
+	". fvtwo ."
+	". fvthree ."
+	". fvfour ."
+	". fvfive ."
+	". fvsix .";
+	grid-row-gap: 8rem;
+	text-align: center;
+}
+.flavourgriditemone {
+	grid-area: hdrone;
+	
+}
+.flavourgriditemtwo {
+	grid-area: hrone;
+}
+.flavourgriditemthree {
+	grid-area: fvone;
+}
+.flavourgriditemfour {
+	grid-area: fvtwo;
+}
+.flavourgriditemfive {
+	grid-area: fvthree;
+}
+.flavourgriditemsix {
+	grid-area: fvfour;
+}
+.flavourgriditemseven {
+	grid-area: fvfive;
+}
+.flavourgriditemeight {
+	grid-area: fvsix;
+}
+/* Styling and arranging the return button for mobile. Will not appear in the desktop versions. */
+.flavourgriditemnine {
+	text-align: center;
+	padding-bottom: 10rem;
+}
+.flavourgriditemnine a {
+	font-size: 2rem;
+}
+/* Hidden hr element, purpose is to display during desktop displays. */
+.flavourgriditemten {
+	display: none;
+}
+
+/* /// FLAVOURS STYLING ABOVE /// */
+
+/* /// HOURS STYLING BELOW /// */
+
+.hoursinput {
+	width: 100%;
+	resize: vertical;
+	text-align: center;
+	border-color: var(--primary-color);
+	border-radius: 2rem;
+	border: 0.14rem solid var(--primary-color);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+
+}
+.hourslabel {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: center;
+}
+/* Creating a grid layout for the contact & hours segment to appear sorted vertically on the mobile layout. minmax is used to efficiently set a max value of each column (10%, 80%, 10%) with min set to auto in order to maintain centered content. */
+.acontactgridcontainer {
+	width: 100%;
+	display: grid;
+	grid-template-columns: minmax(auto, 10%) minmax(auto, 80%) minmax(auto, 10%);
+	grid-template-rows: 5rem 5rem 15rem 5rem 5rem 5rem 35rem 5rem 2.5rem;
+	grid-template-areas: "hdrone hdrone hdrone"
+	"hrone hrone hrone"
+	". hours ."
+	"hrtwo hrtwo hrtwo"
+	"hdrtwo hdrtwo hdrtwo"
+	"hrthree hrthree hrthree"
+	". contact ."
+	"hrfour hrfour hrfour";
+}
+.acontactgriditemone {
+	grid-area: hdrone;
+	grid-column: 1 / span 3;
+}
+.acontactgriditemtwo {
+	grid-area: hrone;
+	margin-top: 2rem;
+}
+.acontactgriditemthree {
+	grid-area: hours;
+	display: block;
+	margin: 0 auto;
+}
+.acontactgriditemfour {
+	grid-area: hrtwo;
+	margin-top: 3rem;
+}
+.acontactgriditemfive {
+	grid-area: hdrtwo;
+}
+.acontactgriditemsix {
+	grid-area: hrthree;
+	margin-top: 3rem;
+}
+.acontactgriditemseven {
+	grid-area: contact;
+}
+.acontactgriditemeight {
+	grid-area: hrfour;
+}
+/* larger, more in-depth paragraph content hidden and reserved for dekstop media query. */
+.desktoppara {
+	display: none;
+}
+
+/* /// HOURS STYLING ABOVE /// */
+
+/* /// FOOTER STYLING BELOW /// */
+
+/* Position set to absolute to ensure content inside footer and footer itself stays put in one area, alongside with the usage of bottom: 0, moving it to the bottom of the webpage always. */
+.footer {
+	background-color: var(--primary-color);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.footer img {
+	width: 2rem;
+	max-width: 100%;
+	margin:auto;
+}
+.footerp {
+	color: #ffffff;
+	font-family: var(--text-font);
+	font-weight: 600;
+	font-style: italic;
+}
+.footericon {
+	color: #ffffff;
+	margin-left: 0.5rem;
+}
+/* Layout out the footer grid to efficiently arrange footer content inside the parent container. Ensures proper spacing on different displays. */
+.footergridcontainer {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "copy logo socials";
+	align-items: center;
+	justify-items: center;
+	width: 100%;
+}
+.footergriditemone {
+	grid-area: copy;
+}
+.footergriditemtwo {
+	grid-area: logo;
+}
+.footergriditemthree {
+	grid-area: socials;
+}
+
+/* /// FOOTER STYLING ABOVE /// */
+
+/* /// ANIMATIONS BELOW /// */
+
+/* Adds a nice ease in-ease out smoothness when the anchor tag transitions from one color to the highligh color. */
+a:hover {
+	transition: 0.2s ease-in-out;
+	
+}
+a {
+	transition: 0.2s ease-in-out;
+}
+/* Ease-out animation used to create a aesthetically pleasing opacity fade in & translate in of each website's content. */
+.contentfade {
+	animation: contentfade;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+}
+@keyframes contentfade {
+	0% {
+		opacity: 0%;
+		transform: translate(0, 50px);
+	}
+	100% {
+		opacity: 100%;
+		transform: translate(0, 0px);
+	}
+}
+/* Creates a keyfreame animation applied to the "return to top" arrows used on mobile pages. Animation causes the arrow to sway up and down to inform the user that it sends them up the page. */
+.returnbtnsway {
+	animation: sway;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+
+}
+@keyframes sway {
+
+	0% {
+		transform: translate(0px, -5px);
+	}
+	50% {
+		transform: translate(0px, 5px);
+	}
+	100% {
+		transform: translate(0px, -5px);
+	}
+}
+/* /// ANIMATIONS ABOVE /// */
+
+/* media query for minor adjustments for display resolution outliers */
+@media only screen and (min-width: 500px) {
+	
+	/* /// GLOBAL STYLING FOR TABLET-PHONE MIDRANGE BELOW /// */
+
+	table {
+		border-spacing: 2rem 0;
+		font-size: 1.3rem;
+	}
+	input {
+		font-size: 1.2rem;
+		height: 2rem;
+	}
+	label {
+		font-size: 1.4rem;
+	}
+	/* /// GLOBAL STYLING FOR TABLET-PHONE MIDRANGE ABOVE /// */
+
+	/* /// HOMEPAGE STYLING FOR TABLET-PHONE MIDRANGE BELOW /// */
+
+	.homeimagecontainer {
+		width: 200px;
+		height: 150px;
+	}
+
+	/* /// HOMEPAGE STYLING FOR TABLET-PHONE MIDRANGE ABOVE */
+}
+/* media query for tablet displays */
+@media only screen and (min-width: 760px) {
+
+	/* /// GLOBAL STYLING FOR TABLET BELOW /// */
+
+	p {
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+	}
+	table {
+		border-spacing: 5rem 0;
+		font-size: 1.4rem;
+	}
+	label {
+		font-size: 1.4rem;
+	}
+	input {
+		font-size: 1.2rem;
+		height: 2rem;
+	}
+	textarea {
+		font-size: 1.2rem;
+	}
+	button {
+		font-size: 1.4rem;
+	}
+
+	/* /// GLOBAL STYLING FOR TABLET ABOVE /// */
+
+	/* /// HOMEPAGE STYLING FOR TABLET BELOW /// */
+
+	/* Overhauling homepage's grid format to match the homepage mockup with a few aesthetic tweaks. Uses grid-template-area to efficiently lay out each element's place in the grid. */
+	.homepagegridcontainer {
+		grid-column-gap: 0px;
+	    grid-template-rows: 5rem 4rem 10rem 4rem 0.2rem 5rem 4rem 10rem 4rem 10rem;
+		grid-template-areas: 
+		"hdrone hdrone"
+		"hrone hrone"
+		"pone ione"
+		"bone ."
+		"hrtwo hrtwo"
+		"hdrtwo hdrtwo"
+		"hrthree hrthree"
+		"itwo ptwo"
+		". btwo"
+		"hrfour hrfour";
+	}
+	.bluehr {
+		width: 90%;
+	}
+	.purplehr {
+		width: 90%;
+	}
+	/* Increases image size to match the larger display resolution. */
+	.homeimagecontainer {
+		width: 325px;
+		height: 225px;
+	}
+
+	/* /// HOMEPAGE STYLING FOR TABLET ABOVE /// */
+
+	/* /// HOURS STYLING FOR TABLET BELOW /// */
+
+	/* Adjusting the 3rd last, 2nd last and last row sizes to balance the contact form spacing out for tablet. */
+	.acontactgridcontainer {
+		grid-template-rows: 5rem 5rem 15rem 5rem 5rem 5rem 44rem 8rem 0rem;
+	}
+
+	/* /// HOURS STYLING FOR TABLET ABOVE /// */
+
+	/* /// FLAVOURS STYLING FOR TABLET BELOW /// */
+	
+	/* Increasing row size of cells that hold images to create a more square-like border appearance. */
+	.flavourgridcontainer {
+		grid-template-rows: 1rem 0rem 30rem 30rem 30rem 30rem 30rem 30rem 3rem;
+	}
+
+	/* /// FLAVOURS STYLING FOR TABLET ABOVE /// */
+
+}
+
+/* media query for desktop displays */
+@media screen and (min-width: 1024px) {
+
+	/* /// GLOBAL STYLING BELOW /// */
+
+	p {
+		font-size: 1.1rem;
+		font-weight: 600;
+	}
+	.bluehr {
+		width: 100%;
+	}
+	.purplehr {
+		width: 100%;
+	}
+	table {
+		border-spacing: 1rem 0px;
+		font-size: 1.4rem;
+	}
+	table, td, th, tr {
+		line-height:3.2rem;
+	}
+
+	/* /// GLOBAL STYLING ABOVE /// */
+
+	/* /// NAV BAR STYLING BELOW /// */
+
+	/* Sets the container for the nav bar to display: flex to easily vertically align / center children along the rectangle.*/
+	.navgridcontainer {
+		display: flex;
+		align-items: center;
+	}
+	/* Removing the max-width value used in mobile to ensure the logo fills out the desktop bar. Includes minor marging and padding adjustments. */
+	.navlogo {
+		padding-top: 1rem;
+		margin-left: 2rem;
+		max-width:none;
+	}
+	/* Setting navcontents display to visible by applying the default HTML display value, inline. Removes border around content, which was used for the mobile burger menu.  */
+	.navcontents {
+		display: inline;
+		margin-right: 15rem;
+		border: none;
+		padding-bottom: 0rem;
+	}
+	.navcontents a {
+		margin-left: 1rem;
+		margin-right: 1rem;
+		font-size: 1.5rem;
+	}
+	/* Hiding the horizontal rows used in the mobile burger menu */
+	.purplenavhr {
+		display: none;
+	}
+	/* Hiding the burger bars icon from the mobile view. */
+	.burgerbars {
+		display: none;
+	}
+
+	/* /// NAV BAR STYLING ABOVE /// */
+
+	/* /// HOMEPAGE STYLING BELOW /// */
+
+	/* Size adjustments for the homepage image containers to ensure they are bigger for desktop view. */
+	.homeimagecontainer {
+		width: 300px;
+		height: 300px;
+	}
+	/* Overhaul of the original grid system to fit the mockup grid for desktop. Involves using minmax percentages to ensure balanced sections with a clear minimum and maximum value. Grid-template-areas is redone to adhere to the new column and row restrictions, alongside removing any place for hidden values such as the buttons from the mobile view.*/
+	.homepagegridcontainer {
+		grid-template-columns: minmax(auto, 20%) minmax(auto, 28%) minmax(auto, 4%) minmax(auto, 28%) minmax(auto, 20%);
+		grid-template-rows: 10rem 5rem 25rem 5rem 6rem 25rem 10rem;
+		grid-template-areas: 
+		". hrone hrone hrone ."
+		". hdrone . ione ."
+		". pone pone ione ."
+		".  hrtwo hrtwo hrtwo ."
+		". itwo . hdrtwo ."
+		". itwo . ptwo ."
+		". hrfour hrfour hrfour .";
+	}
+	/* Margin adjustment for the first header of the page. */
+	.homegriditemone {
+		text-align: start;
+	}
+	.homegriditemtwo {
+		margin-top: 6rem;
+	}
+	/* Removing left margins from first paragraph alongside setting text-aling to start to aling with the header */
+	.homegriditemthree {
+		text-align: start;
+		margin-left: 0rem;
+	}
+	.homegriditemfour {
+		margin-left: 2.5rem;
+	}
+	/* Turning off display for buttons on homepage. */
+	.homegriditemfive {
+		display: none;
+	}
+	.homegriditemeleven {
+		display: none;
+	}
+	/* Removing margins for second paragraph content alongside setting the text-align to end to match with the second header.  */
+	.homegriditemten {
+		text-align: end;
+		margin-right: 0rem;
+	}
+	.homegriditemseven {
+		text-align: end;
+	}
+	/* Setting the more-depth, larger paragraph content to visible for dekstop view. Default HTML display property is inline. */
+	.desktoppara {
+		display: inline;
+	}
+	/* Hiding the lesser, summarized text from mobile view for desktop view. */
+	.mobilepara {
+		display: none;
+	}
+
+	/* /// HOMEPAGE STYLING ABOVE /// */
+
+	/* /// HOURS STYLING BELOW /// */
+
+	/* Overhauling the contact & hours grid layout to support a side-by-side desktop arrangement as detailed in the mockup. Sides are pixel values whilst the main content holding cells are in fr form to accuretly and fully fill in empty space. */
+	.acontactgridcontainer {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 150px 1fr 150px 1fr 150px;
+		grid-template-rows: 5rem 5rem 45rem 10rem;
+		grid-template-areas: ". hdrone . hdrtwo ."
+		". hrone . hrtwo ."
+		". hours . contact ."
+		". hrthree . hrfour ."
+		;
+	}
+	.acontactgriditemthree {
+		margin-top: 0rem;
+	}
+	/* Overwriting the mobile color scheme for this HR as it is now under the contact section, which is done in purple primary. */
+	.acontactgriditemfour {
+		background-color: var(--primary-color);
+	}
+	/* Adjustming margin of Hours lower HR to align with the contact form HR, which is to the left. Also overwriting previous mobile color as it now is in the Hours section, which is blue secondary. */
+	.acontactgriditemsix {
+		margin-top: 1rem;
+		background-color: var(--secondary-color);
+	}
+	/* Adjusting margins of the first hr under Hours section. */
+	.acontactgriditemtwo {
+		margin-top: 3rem;
+	}
+	/* Completely removing the "return to top" arrow used in mobile devices as the page is no longer long vertically, and is for desktop. */
+	.flavourgriditemnine {
+		display: none;
+	}
+
+	/* /// HOURS STYLING ABOVE /// */
+
+	/* /// FLAVOURS STYLING BELOW /// */
+
+	/* Overhauling grid to match the mockup format. Decided on having purple borders, higher border radius, and a generally larger size of images for the final product. (Compared to the mockup. */
+	.flavourgridcontainer {
+		grid-template-columns: 75px 1fr 1fr 1fr 75px;
+		grid-template-rows: 1rem 0rem 18rem 18rem 1rem 5rem;
+		grid-template-areas: ". . hdrone . ."
+		". . hrone . ."
+		". fvone fvtwo fvthree ."
+		". fvfour fvfive fvsix ."
+		". . hrtwo . .";
+		grid-row-gap: 8rem;
+		grid-column-gap: 2rem;
+		text-align: center;
+	}
+	/* Setting display to default html value, along with assigning this dekstop-exclusive element to the overhauled grid for a visually pleasing page. */
+	.flavourgriditemten {
+		grid-area: hrtwo;
+		display: inline;
+	}
+	/* Notice: Return button was removed (Which is on the mockup for the desktop flavour page) due to it not being useful for users on desktop. Page isn't long enough so was removed in final. */
+	/* /// FLAVOURS STYLING ABOVE /// */
+} 
+
+@media screen and (min-width: 1100px) {
+	/* Larger image size to match larger desktop displays */
+	.homeimagecontainer {
+		width: 460px;
+		height: 400px;
+	}
+	/* Margin adjustments on the table to ensure it stays in the middle of the cell without overflow.  */
+	.acontactgriditemthree {
+		margin-top: 10rem;
+	}
+}  
+@media screen and (min-width: 1700px) {
+	/* Furthur desktop adjustments for users with large monitors; 1700 and above.  */
+	/* Increases white space columns on the far-left and far-right of grid, alongside with increasing the row height of the grid cells which contain images to ensure a nice framing on each for the user. */
+	.flavourgridcontainer {
+		grid-template-columns: 200px 1fr 1fr 1fr 200px;
+		grid-template-rows: 1rem 0rem 25rem 25rem 1rem 6rem;
+		grid-row-gap: 8rem;
+	}
+}
+
