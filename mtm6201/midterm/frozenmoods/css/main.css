@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
-/* FONT IMPORTS ABOVE */
+/* /// FONT IMPORTS ABOVE /// */
 
 :root {
 	--primary-color: #726CC8;
@@ -9,7 +9,8 @@
 	--text-font: 'Source Sans Pro', sans-serif;
 }
 
-/* CSS RESET BELOW */
+/* /// CSS RESET BELOW /// */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,9 +54,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* CSS RESET ABOVE */
+/* /// CSS RESET ABOVE /// */
 
-/* CSS STYLING BELOW */
+/* /// CSS STYLING BELOW ///  */
 
 /* /// GLOBAL ELEMENT STYLING BELOW /// */
 
@@ -134,6 +135,7 @@ textarea {
 	font-weight: 600;
 	font-style: italic;
 }
+
 /* /// BROAD ELEMENT STYLING ABOVE /// */
 
 /* /// HOVER STYLING BELOW (ANIMATIONS AT LATER SECTIONS) /// */
@@ -220,6 +222,7 @@ a:hover {
 .logogrid {
 	display: grid;
 }
+/* Ensuring the logo placed on the nav bar will take up 100% width, but limiting it's height to prevent it from becoming too large. */
 .navlogo {
 	max-width: 100%;
 	max-height: 50px;
@@ -338,6 +341,7 @@ a:hover {
 	grid-area: ptwo;
 	margin-right: 2.5rem;
 }
+/* Declaring the width of the button to match the aesthetic choices of the mockup pictures, along with a max-width for mobile to prevent it from scaling too large. */
 .homegriditemeleven {
 	grid-area: btwo;
 	width: 85%;
@@ -467,6 +471,7 @@ a:hover {
 	". contact ."
 	"hrfour hrfour hrfour";
 }
+/* Assigning grid items to the contact grid below. Also includes minor aesthetic adjustments concerning margins, & display */
 .acontactgriditemone {
 	grid-area: hdrone;
 	grid-column: 1 / span 3;
@@ -554,7 +559,7 @@ a:hover {
 
 /* /// ANIMATIONS BELOW /// */
 
-/* Adds a nice ease in-ease out smoothness when the anchor tag transitions from one color to the highligh color. */
+/* Adds a nice ease in-ease out smoothness when the anchor tag transitions from one color to the highlight color, and back to the baseline color when not moused over anymore. */
 a:hover {
 	transition: 0.2s ease-in-out;
 	
@@ -562,7 +567,7 @@ a:hover {
 a {
 	transition: 0.2s ease-in-out;
 }
-/* Ease-out animation used to create a aesthetically pleasing opacity fade in & translate in of each website's content. */
+/* Ease-out animation used to create a aesthetically pleasing opacity fade in & translate in of each website's content when the user arrives. */
 .contentfade {
 	animation: contentfade;
 	animation-duration: 1.5s;
